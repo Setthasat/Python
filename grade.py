@@ -18,11 +18,9 @@ for i in range(len(grade)):
         continue
 
     check = (grade[i]  % 5) 
-    #print("เศษ",int(check))
 
     if check > 2:
         newGrade = (grade[i] - check) + 5
-        #print('round grad', newGrade)
         grade[i] = newGrade
 
 for i in range(len(grade)):
