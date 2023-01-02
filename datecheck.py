@@ -1,5 +1,6 @@
 import time
 import datetime
+
 def check_write_date(x):
     print('ok i will record it now')
     file_date = open('date.txt','w')
@@ -15,11 +16,13 @@ def check_write_date(x):
     file_date.close()
     print('finish record!!')
     check_read_date()
+    
 def check_read_date():
     check_read_date_file = open('date.txt','r')
     check_read_date_file.read()
     check_read_date_file.close()
     print(check_read_date_file)
+    
 def check_date():
     x = datetime.datetime.now()
     print('this year is ',x.year,)
@@ -29,6 +32,7 @@ def check_date():
     c = int(input('Do u want to record it?(pass 1 to yes/pass 2 to no) : '))
     if c == 1 :
         check_write_date(x)
+        
 def check_time():
     start = time.time()
     x = int(input('Enter ur range here : '))
@@ -38,6 +42,7 @@ def check_time():
         print("\n")
     end = time.time()
     print(end - start, 'second')
+    
 def main():
     print('pass 1 to check time')
     print('pass 2 to check date')
@@ -48,5 +53,6 @@ def main():
         check_date()
     else :
         print('plz pass only 1-2!!!')
+        
 if __name__ == '__main__' :
     main()
